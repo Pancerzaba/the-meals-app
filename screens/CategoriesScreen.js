@@ -1,17 +1,23 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, FlatList, TouchableOpacity , Platform} from 'react-native'
 
-import {CATEGORIES} from '../data/dummy-data'
-import { FlatList } from 'react-native-gesture-handler'
+import {CATEGORIES} from '../data/dummy-data';
+import Colors from '../constans/Colors';
 
+
+
+const CategoriesScreen = props => {
 const renderGridItem = itemData =>{
-return<View style={styles.gridItem}>
-    <Text>{itemData.item.title}</Text></View>
+    return(<TouchableOpacity style={styles.gridItem}
+        onPress={()=>{
+        props.navigation.navigate({routeName: 'CategoryMeals'})
+        }}>
+            <View >
+            <Text>{itemData.item.title}</Text></View>
+        </TouchableOpacity>)
 }
-
-const CategoryScreen = props => {
     return (
-        <FlatList keyExtractor={(item, index)=> item.id} data={CATEGORIES} renderItem={renderGridItem} numColums={2}/>
+        <FlatList keyExtractor={(item, index)=> item.id} data={CATEGORIES} renderItem={renderGridItem} numColumns={2}/>
 
         // <View style={styles.screen}>
         //     <Text>The Categories Screen!</Text>
@@ -20,6 +26,14 @@ const CategoryScreen = props => {
         //     }}/>
         // </View>
     )
+}
+
+CategoriesScreen.navigationOptions={
+    headerTitle: 'Meals Categories ',
+    headerStyle: {
+        backgroundColor: Platform.OS ==='android' ? Colors.primary : ''
+    },
+    headerTintColor:  Platform.OS ==='android' ? 'white' : Colors.primary 
 }
 const styles=StyleSheet.create({
     screen:{
@@ -34,4 +48,4 @@ const styles=StyleSheet.create({
     }
 })
 
-export default CategoryScreen
+export default CategoriesScreen
