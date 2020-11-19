@@ -31,10 +31,7 @@ CategoryMealsScreen.navigationOptions = navigationData => {
   
     return {
       headerTitle: selectedCategory.title,
-      headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.primary : ''
-      },
-      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
+      
     };
 }
 
@@ -42,7 +39,8 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: 15
     }
 })
 
