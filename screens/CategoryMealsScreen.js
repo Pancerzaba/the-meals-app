@@ -1,38 +1,50 @@
-import React, {Fragment} from 'react'
-import { View, Text, StyleSheet, Button, Platform } from 'react-native';
+import React, { Fragment } from 'react'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
+import MealItem from '../components/MealItem'
 
- import { CATEGORIES } from '../data/dummy-data';
- import Colors from '../constans/Colors'
+import { CATEGORIES, MEALS } from '../data/dummy-data'
+import Colors from '../constans/Colors'
 
-const CategoryMealsScreen = props => {
-    const catId = props.navigation.getParam('categoryId');
+const CategoryMealsScreen = (props) => {
+    const renderMealItem = (itemData) => {
+        return (
+            <MealItem
+                title={itemData.item.title}
+                image={itemData.item.imageUrl}
+                duration={itemData.item.duration}
+                complexity={itemData.item.complexity}
+                affordability={itemData.item.affordability}
+                onSelectMeal={() => {}}
+            />
+        )
+    }
+    const catId = props.navigation.getParam('categoryId')
 
-    const selectCategory  = CATEGORIES.find(item => item.id === catId);
+    const selectCategory = CATEGORIES.find((item) => item.id === catId)
+    const displayedMeals = MEALS.filter(
+        (meal) => meal.categoryIds.indexOf(catId) >= 0
+    )
 
     return (
         <View style={styles.screen}>
-             <Text>{selectCategory.title}</Text>
-            <Text>"The Categories Meals Screen!"</Text>
-           
-            <Button title="Go to Details!" onPress={() => {
-                props.navigation.navigate({ routeName: 'MealDetail' })
-            }} />
-            <Button title="Go Back!" onPress={() => {
-                props.navigation.pop()
-            }} />
+            <FlatList
+                data={displayedMeals}
+                keyExtractor={(item, index) => item.id}
+                renderItem={renderMealItem}
+                style={{ width: '100%' }}
+            />
         </View>
     )
 }
 
-CategoryMealsScreen.navigationOptions = navigationData => {
-    const catId = navigationData.navigation.getParam('categoryId');
-  
-    const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
-  
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+    const catId = navigationData.navigation.getParam('categoryId')
+
+    const selectedCategory = CATEGORIES.find((cat) => cat.id === catId)
+
     return {
-      headerTitle: selectedCategory.title,
-      
-    };
+        headerTitle: selectedCategory.title,
+    }
 }
 
 const styles = StyleSheet.create({
@@ -40,8 +52,9 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 15
-    }
+        padding: 15,
+        height: 150,
+    },
 })
 
 export default CategoryMealsScreen
