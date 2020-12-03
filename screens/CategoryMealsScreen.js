@@ -5,7 +5,7 @@ import MealItem from '../components/MealItem'
 import { CATEGORIES, MEALS } from '../data/dummy-data'
 import Colors from '../constans/Colors'
 
-const CategoryMealsScreen = (props) => {
+const CategoryMealScreen = (props) => {
     const renderMealItem = (itemData) => {
         return (
             <MealItem
@@ -14,13 +14,19 @@ const CategoryMealsScreen = (props) => {
                 duration={itemData.item.duration}
                 complexity={itemData.item.complexity}
                 affordability={itemData.item.affordability}
-                onSelectMeal={() => {}}
+                onSelectMeal={() => {
+                    props.navigation.navigate({
+                        routeName: 'MealDetail',
+                        params: {
+                            mealId: itemData.item.id,
+                        },
+                    })
+                }}
             />
         )
     }
     const catId = props.navigation.getParam('categoryId')
 
-    const selectCategory = CATEGORIES.find((item) => item.id === catId)
     const displayedMeals = MEALS.filter(
         (meal) => meal.categoryIds.indexOf(catId) >= 0
     )
@@ -37,7 +43,7 @@ const CategoryMealsScreen = (props) => {
     )
 }
 
-CategoryMealsScreen.navigationOptions = (navigationData) => {
+CategoryMealScreen.navigationOptions = (navigationData) => {
     const catId = navigationData.navigation.getParam('categoryId')
 
     const selectedCategory = CATEGORIES.find((cat) => cat.id === catId)
@@ -57,4 +63,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default CategoryMealsScreen
+export default CategoryMealScreen
