@@ -1,42 +1,50 @@
-import {Platform} from 'react-native';
-import { createAppContainer} from 'react-navigation';
+import { Platform } from 'react-native'
+import { createAppContainer } from 'react-navigation'
 // createStackNavigator, to pobierasz go ze react-navigation-stack
-import {createStackNavigator} from 'react-navigation-stack'
+import { createStackNavigator } from 'react-navigation-stack'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 
-import CategoriesScreen from '../screens/CategoriesScreen';
-import CategoryMealsScreen from '../screens/CategoryMealsScreen';
-import MealDetailScreen from '../screens/MealDetailScreen';
+import CategoriesScreen from '../screens/CategoriesScreen'
+import CategoryMealsScreen from '../screens/CategoryMealsScreen'
+import MealDetailScreen from '../screens/MealDetailScreen'
+import FavouritesScreen from '../screens/FavouriteScrean'
 import Colors from '../constans/Colors'
 
-const MealsNavigator = createStackNavigator({
-    
-    Categories:{ screen: CategoriesScreen,
-         navigationOptions:{
-             headerTitle: 'Meal Categories',
-        }
-            },
-    CategoryMeals: {
-        screen: CategoryMealsScreen,
-        navigationOptions:{
-        },
-   
-    },
-    MealDetail: {
-        screen: MealDetailScreen,
-        navigationOptions:{
-            headerTitle: 'Meal Detail',
-        }
-    }
-   
-},
+const MealsNavigator = createStackNavigator(
     {
-        defaultNavigationOptions:{
+        Categories: {
+            screen: CategoriesScreen,
+            navigationOptions: {
+                headerTitle: 'Meal Categories',
+            },
+        },
+        CategoryMeals: {
+            screen: CategoryMealsScreen,
+            navigationOptions: {},
+        },
+        MealDetail: {
+            screen: MealDetailScreen,
+            navigationOptions: {
+                headerTitle: 'Meal Detail',
+            },
+        },
+    },
+    {
+        defaultNavigationOptions: {
             headerStyle: {
-                backgroundColor: Platform.OS === 'android' ? Colors.primary : ''
-              },
-              headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary,
-              headerTitle: 'A Screen'
-        }
+                backgroundColor:
+                    Platform.OS === 'android' ? Colors.primary : '',
+            },
+            headerTintColor:
+                Platform.OS === 'android' ? 'white' : Colors.primary,
+            headerTitle: 'A Screen',
+        },
     }
-);
-export default createAppContainer(MealsNavigator);
+)
+
+const MealsFavTabNavigator = createBottomTabNavigator({
+    Meals: MealsNavigator,
+    Favourites: FavouritesScreen,
+})
+
+export default createAppContainer(MealsFavTabNavigator)
