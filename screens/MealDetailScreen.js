@@ -31,7 +31,7 @@ MealDetailScreen.navigationOptions = (navigationData) => {
             <HeaderButtons HeaderButtonComponent={HeaderButton}>
                 <Item
                     title="Favourite"
-                    IconName="ios-star"
+                    IconName="md-star"
                     onPress={() => {
                         console.log('Lubie to')
                     }}
