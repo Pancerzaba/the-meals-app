@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Pancerżaba\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add vector-icons
+  C:\Program Files\nodejs\node.exe C:\Users\Pancerżaba\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-navigation-materil-bottom-tabs
 
 PATH: 
-  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git LFS;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Pancerżaba\AppData\Local\Microsoft\WindowsApps;C:\Users\Pancerżaba\AppData\Roaming\npm;C:\Program Files\Java\jdk-14.0.2\bin;D:\StudiaMarta\Android\Sdk\platform-tools;D:\StudiaMarta\Android\Sdk\tools;C:\Users\Pancerżaba\.dotnet\tools
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git LFS;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Users\Pancerżaba\AppData\Local\Microsoft\WindowsApps;C:\Users\Pancerżaba\AppData\Roaming\npm;C:\Program Files\Java\jdk-14.0.2\bin;D:\StudiaMarta\Android\Sdk\platform-tools;D:\StudiaMarta\Android\Sdk\tools;C:\Users\Pancerżaba\.dotnet\tools
 
 Yarn version: 
   1.22.10
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/vector-icons: Not found
+  Error: https://registry.yarnpkg.com/react-navigation-materil-bottom-tabs: Not found
       at Request.params.callback [as _callback] (C:\Users\Pancerżaba\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
       at Request.self.callback (C:\Users\Pancerżaba\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
       at Request.emit (events.js:314:20)
@@ -28,38 +28,38 @@ Trace:
 
 npm manifest: 
   {
-    "main": "node_modules/expo/AppEntry.js",
-    "scripts": {
-      "start": "expo start",
-      "android": "expo start --android",
-      "ios": "expo start --ios",
-      "web": "expo start --web",
-      "eject": "expo eject"
-    },
-    "dependencies": {
-      "@expo/vector-icons": "^12.0.1",
-      "@react-native-community/masked-view": "0.1.10",
-      "expo": "^39.0.3",
-      "expo-font": "^8.3.0",
-      "expo-status-bar": "~1.0.2",
-      "react": "16.13.1",
-      "react-dom": "16.13.1",
-      "react-native": "^0.63.3",
-      "react-native-gesture-handler": "~1.7.0",
-      "react-native-reanimated": "~1.13.0",
-      "react-native-safe-area-context": "3.1.4",
-      "react-native-screens": "~2.10.1",
-      "react-native-web": "~0.13.12",
-      "react-navigation": "^4.4.2",
-      "react-navigation-drawer": "^2.5.2",
-      "react-navigation-header-buttons": "^6.0.0",
-      "react-navigation-stack": "^2.8.4",
-      "react-navigation-tabs": "^2.9.2"
-    },
-    "devDependencies": {
-      "@babel/core": "~7.9.0"
-    },
-    "private": true
+      "main": "node_modules/expo/AppEntry.js",
+      "scripts": {
+          "start": "expo start",
+          "android": "expo start --android",
+          "ios": "expo start --ios",
+          "web": "expo start --web",
+          "eject": "expo eject"
+      },
+      "dependencies": {
+          "@expo/vector-icons": "^10.0.0",
+          "@react-native-community/masked-view": "0.1.10",
+          "expo": "^39.0.3",
+          "expo-font": "^8.3.0",
+          "expo-status-bar": "~1.0.2",
+          "react": "16.13.1",
+          "react-dom": "16.13.1",
+          "react-native": "^0.63.3",
+          "react-native-gesture-handler": "~1.7.0",
+          "react-native-reanimated": "~1.13.0",
+          "react-native-safe-area-context": "3.1.4",
+          "react-native-screens": "~2.10.1",
+          "react-native-web": "~0.13.12",
+          "react-navigation": "^4.4.2",
+          "react-navigation-drawer": "^2.5.2",
+          "react-navigation-header-buttons": "^6.0.0",
+          "react-navigation-stack": "^2.8.4",
+          "react-navigation-tabs": "^2.9.2"
+      },
+      "devDependencies": {
+          "@babel/core": "~7.9.0"
+      },
+      "private": true
   }
 
 yarn manifest: 
@@ -1098,24 +1098,12 @@ Lockfile:
       xcode "^3.0.0"
       xml-js "^1.6.11"
   
-  "@expo/vector-icons@^10.0.2":
+  "@expo/vector-icons@^10.0.0", "@expo/vector-icons@^10.0.2":
     version "10.2.1"
     resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-10.2.1.tgz#47fb2fa12d7ad601835babde6bd3ddea7f6fde89"
     integrity sha512-clYQZFLeU2y23n03hXg18EEsZS5c73sJJnfderztfSAqkUXkfUtv07fwuprYwbHIvgFkw6L7R6xJOCVYtS85iQ==
     dependencies:
       lodash "^4.17.4"
-  
-  "@expo/vector-icons@^12.0.1":
-    version "12.0.1"
-    resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-12.0.1.tgz#a112dc51b5a1ad521621b2c0062b5225a60699f8"
-    integrity sha512-HIzNmnTtSPmsivQ2djqqttq5v7GvjsKz1ap5pbfJGxygtTymulm9j+2AdEY3JWUCBAUyjtOPorNGC9tuTSN3hw==
-    dependencies:
-      lodash.frompairs "^4.0.1"
-      lodash.isequal "^4.5.0"
-      lodash.isstring "^4.0.1"
-      lodash.omit "^4.5.0"
-      lodash.pick "^4.4.0"
-      lodash.template "^4.5.0"
   
   "@expo/websql@^1.0.1":
     version "1.0.1"
@@ -3626,51 +3614,6 @@ Lockfile:
     integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
     dependencies:
       p-locate "^4.1.0"
-  
-  lodash._reinterpolate@^3.0.0:
-    version "3.0.0"
-    resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
-    integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
-  
-  lodash.frompairs@^4.0.1:
-    version "4.0.1"
-    resolved "https://registry.yarnpkg.com/lodash.frompairs/-/lodash.frompairs-4.0.1.tgz#bc4e5207fa2757c136e573614e9664506b2b1bd2"
-    integrity sha1-vE5SB/onV8E25XNhTpZkUGsrG9I=
-  
-  lodash.isequal@^4.5.0:
-    version "4.5.0"
-    resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-    integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
-  
-  lodash.isstring@^4.0.1:
-    version "4.0.1"
-    resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
-    integrity sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=
-  
-  lodash.omit@^4.5.0:
-    version "4.5.0"
-    resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
-    integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
-  
-  lodash.pick@^4.4.0:
-    version "4.4.0"
-    resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
-    integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
-  
-  lodash.template@^4.5.0:
-    version "4.5.0"
-    resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
-    integrity sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==
-    dependencies:
-      lodash._reinterpolate "^3.0.0"
-      lodash.templatesettings "^4.0.0"
-  
-  lodash.templatesettings@^4.0.0:
-    version "4.2.0"
-    resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.2.0.tgz#e481310f049d3cf6d47e912ad09313b154f0fb33"
-    integrity sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==
-    dependencies:
-      lodash._reinterpolate "^3.0.0"
   
   lodash.throttle@^4.1.1:
     version "4.1.1"
